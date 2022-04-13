@@ -24,10 +24,22 @@ function handleClick() {
       <section className={styles.pasiens}>
         <h2 className={styles.pasien__judul}>Pasien</h2>
         <div className={styles.pasien__container}>
+        <table>
+            <tr>
+                <th>No</th>
+                <th>Provinsi</th>
+                <th>Positif</th>
+                <th>Sembuh</th>
+                <th>Dirawat</th>
+                <th>Meninggal</th>
+            </tr>
+            
           {
             pasiens.provinces.map((pasien) => (
               <Pasien key={pasien.kota} pasien={pasien}/> 
             ))}
+            
+            </table>
         </div>
         <button onClick={handleClick}>Add Pasiens</button>
       </section>
