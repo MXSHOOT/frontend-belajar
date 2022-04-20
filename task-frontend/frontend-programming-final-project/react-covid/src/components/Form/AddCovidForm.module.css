@@ -1,97 +1,93 @@
-.container{
-    padding: 0;
-    margin: 3em 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-evenly;
+/* Small Screen */
+.container {
+  margin: 5rem 1rem;
+  padding: 1rem;
 }
 
-.hero__image {
-    max-width: 100%;
-    height: auto;
-    border-radius: 25px;
-  }
-
-.form__image{
-    max-width: 100%;
-    height: auto;
-    border-radius: 25px;
+.form {
+  display: flex;
+  flex-direction: column;
 }
 
 .form__left {
-    margin-bottom: 1rem;
+  display: none;
+}
+
+.form__image {
+  max-width: 100%;
+  border-radius: 25px;
+  height: auto;
+}
+
+.form__title {
+  text-align: center;
+  color: #4361ee;
+  font-size: 2.44rem;
+  margin-bottom: 1rem;
+}
+
+.form__group {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
+.form__label {
+  margin-bottom: 1rem;
+}
+
+.form__input {
+  outline: none;
+  padding: 1rem 0.5rem;
+  border-radius: 10px;
+  border: 1px solid #64748b;
+}
+
+.form__input:focus {
+  border: 1px solid #4361ee;
+}
+
+.form__select {
+  outline: none;
+  padding: 1rem 0.5rem;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.form__select:focus {
+  border: 1px solid #4361ee;
+}
+
+.form__button {
+  padding: 0.8rem 2rem;
+  border: none;
+  border-radius: 10px;
+  background-color: #4361ee;
+  color: #fff;
+  display: block;
+  margin: 0 auto;
+  width: 100%;
+}
+
+/* Large Screen */
+@media (min-width: 992px) {
+  .container {
+    max-width: 1200px;
+    margin: 5rem auto;
   }
 
-.form__right{
+  .form {
     display: flex;
-    flex-direction: column;
-    margin-top: 1em;
-}
-
-.form__right h2{
-    margin-right: auto;
-    margin-left: auto;
-    color: #4361ee;
-    margin-bottom: 1em;
-}
-
-.form__control{
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 1em;
-}
-
-label{
-    font-size: 9pt;
-    color: #4361ee;
-}
-
-.form__input{
-    margin-top: 0.6em;
-    border: 1px solid #4361ee;
-    border-radius: 6px;
-    height: 2em;
-    padding: 0 1em;
-}
-
-.form__button{
-    width:15em;
-    height: 2em;
-    color: #fff;
-    background-color: #4361ee;
-    border: 0;
-    padding: 0.3em 0;
-    border-radius: 6px;
-}
-
-/* Medium Screen */
-@media (min-width: 768px) {
-    /*
-     * Nothing TODO Here.
-     * We dont change style Hero. 
-     */
+    flex-direction: row;
+    align-items: center;
   }
-  
-  /* Large Screen */
-  @media (min-width: 992px) {
-    .container {
-      max-width: 1200px;
-      margin: 3rem auto;
-    }
-  
-    .hero {
-      margin: 0 1rem;
-      flex-direction: row;
-      justify-content: space-between;
-      align-items: center;
-      text-align: left;
-    }
-  
-    .hero__left {
-      flex-basis: 40%;
-    }
-  
-    .hero__right {
-      flex-basis: 60%;
-    }
+
+  .form__left {
+    display: block;
+    flex-basis: 60%;
   }
+
+  .form__right {
+    flex-basis: 40%;
+  }
+}
