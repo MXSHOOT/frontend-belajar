@@ -1,34 +1,36 @@
 import Movie from "../Movie/Movie";
 import styles from "./Movies.module.css";
-import data from "../../utils/constants/data";
-import { useState } from "react";
 import { nanoid } from "nanoid";
 
-function Movies() {
-   const [movies, setMovies] = useState(data);
-
-function handleClick() {
-  const movie = {
-    id: nanoid(),
-    title: "Jigsaw Spiral",
-    year: 2020,
-    type: "Movie",
-    poster : "https://picsum.photos/300/400",
-  };
-  setMovies([...movies, movie]);
-}
-
+function Movies(props) {
+  // destructing
+  const { movies, setMovies } = props;
+  function tambahFilm() {
+    const movie = {
+      id: nanoid(),
+      title: "Spiral Jigsaw",
+      year: "2021",
+      type: "Movie",
+      poster: "https://picsum.photos/300/400",
+    };
+    setMovies([...movies, movie]);
+  }
   return (
     <div className={styles.container}>
       <section className={styles.movies}>
-        <h2 className={styles.movie__judul}>Latest Movies</h2>
+        <h2 className={styles.movies__title}>Latest Movies</h2>
         <div className={styles.movie__container}>
-          {
-            movies.map((movie) => (
-              <Movie key={movie.id} movie={movie}/> 
-            ))}
+          {/*
+           * looping data movies : map
+           * Render Component Movie
+           * Kirim props movie
+           */}
+          {movies.map(function (movie) {
+            return <Movie key={movie.id} movie={movie} />;
+          })}
         </div>
-        <button onClick={handleClick}>Add Movie</button>
+        {/* Button menambahkan event on click */}
+        <button onClick={tambahFilm}>Add Movie</button>
       </section>
     </div>
   );

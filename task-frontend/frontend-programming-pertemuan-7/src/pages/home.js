@@ -1,27 +1,18 @@
-import AddMovieForm from "../components/AddMovieForm/AddMovieForm";
-import Footer from "../components/Footer/Footer";
+import { useState } from "react";
+import Add from "../components/AddMovieForm/AddMovieForm";
 import Hero from "../components/Hero/Hero";
 import Movies from "../components/Movies/Movies";
-import Navbar from "../components/Navbar/Navbar";
+import data from "../utils/constants/data";
 
-function Main() {
-    return (
-      <main>
-        <Hero />
-        <Movies />
-      </main>
-    );
-  }
-  
 function Home() {
-    return (
-      <>
-        <Navbar />
-        <Main />
-        <AddMovieForm />
-        <Footer />
-      </>
-    );
-  }
+  const [movies, setMovies] = useState(data);
+  return (
+    <div>
+      <Hero />
+      <Movies movies={movies} setMovies={setMovies} />
+      <Add movies={movies} setMovies={setMovies} />
+    </div>
+  );
+}
 
 export default Home;
