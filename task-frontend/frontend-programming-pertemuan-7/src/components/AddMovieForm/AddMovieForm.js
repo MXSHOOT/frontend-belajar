@@ -123,6 +123,7 @@ function Add(props) {
                 DLL
               </option>
             </select>
+            {/* Edentifikasi */}
             {typeError && <Alert>Silahkan Pilih Genre</Alert>}
 
             <button className={styles.add__button}>submit</button>
