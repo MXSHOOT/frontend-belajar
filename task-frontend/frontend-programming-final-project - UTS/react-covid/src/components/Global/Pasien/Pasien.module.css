@@ -1,0 +1,56 @@
+  .pasien {
+    margin-bottom: 1rem;
+    border: 1rem ;
+    margin: auto;
+    margin-bottom: 1rem;
+    padding: 20px;
+    background-color: white;
+    height: auto;
+    border-radius: 10px;
+    max-width: 100%;
+    font-size: 2rem;
+    box-shadow: 5px 5px 5px lightblue;
+  }
+  .Sembuh {
+    color: #06D6A0;
+    font-size: 1.44rem;
+  }
+  .Positif {
+      color: #2372b3;
+      font-size: 1.44rem;
+  }
+  .Meninggal {
+    color: #2372b3;
+    font-size: 1.44rem;
+}
+  .pasien__status {
+    border-radius: 25px;
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+  }
+
+  .pasien__total {
+    color: #4361ee;
+    font-size: 1.95rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .movie__date {
+    color: #64748b;
+  }
+
+  /* Medium Screen */
+  @media (min-width: 768px) {
+    .pasien {
+      flex-basis: 50%;
+    }
+  }
+  
+  /* Large Screen */
+  @media (min-width: 992px) {
+    .pasien {
+      flex-basis: 25%;
+      padding: 1rem;
+    }
+  }
