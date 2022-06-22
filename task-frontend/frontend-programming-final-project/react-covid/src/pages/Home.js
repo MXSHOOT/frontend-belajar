@@ -1,28 +1,16 @@
-import Footer from "../components/Footer";
-import Hello from "../components/Hello";
-import Navbar from "../components/Navbar";
-import Global from "../components/Global/Pasiens";
-import CovidForm from '../components/Form/AddCovidForm';
-import Provinces from "../components/Provinces/Pasiens";
+// Import Navbar, Hero, Movies, Footer Component
+import Hero from "../components/Hello/index";
+import Movies from "../components/Global/Pasiens";
 
-function Main() {
-  return (
-    <main>
-      <Hello />
-      <Global /> 
-      <h1>Hello Geeks!!!</h1>
-      <Provinces /> 
-      <CovidForm />
-    </main>
-  );
-}
-
+/**
+ * Membuat Component Home.
+ * Menampilkan Halaman Home.
+ */
 function Home() {
   return (
     <>
-      <Navbar />
-      <Main />
-      <Footer />
+      <Hero />
+      <Movies title="Latest Movies" />
     </>
   );
 }

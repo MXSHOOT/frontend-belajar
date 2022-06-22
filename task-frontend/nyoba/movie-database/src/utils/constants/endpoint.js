@@ -2,7 +2,7 @@
 const API_KEY = process.env.REACT_APP_API_KEY;
 
 // Membuat variable URL API: BASE_URL
-const BASE_URL = "https://api.themoviedb.org/3";
+const BASE_URL = "covid19.mathdro.id/api";
 
 // Membuat Variable Endpoints (object)
 const ENDPOINTS = {
